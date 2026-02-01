@@ -1,1 +1,6 @@
+pyspark 
 
+form pyspark.sql import SparkSession
+saprk=SparkSession.builder.appName.getOrCreate()
+df=spark.read.csv("path/file.csv",header=True,inferScheema=True)
+df.printScheema()
