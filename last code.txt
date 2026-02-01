@@ -1,6 +1,86 @@
+.............................................................................
 pyspark 
 
 form pyspark.sql import SparkSession
 saprk=SparkSession.builder.appName.getOrCreate()
 df=spark.read.csv("path/file.csv",header=True,inferScheema=True)
 df.printScheema()
+
+df.filter(df[colunm_name].isNull).show()
+//.isNotNull for not null
+.............................................................................
+sql
+CREATE DATABASE new_db
+
+CREATE TABLE DEPARTMENTS(
+dept_id INT PRIMARY KEY,
+dept_name VARCHAR (100) NOT NULL UNIQUE
+);
+
+
+CREATE TABLE employees (
+  emp_id      INT PRIMARY KEY,
+  first_name  VARCHAR(50) NOT NULL,
+  last_name   VARCHAR(50) NOT NULL,
+  email       VARCHAR(150) UNIQUE,
+  salary      DECIMAL(12,2),
+  hire_date   DATE,
+  dept_id     INT,
+  CONSTRAINT fk_emp_dept FORIGN KEY (dept_id) REFERENCES     departments(dept_id),CONSTRAINT chk_salary CHECK (salary >= 0)
+);
+
+------------------------------------------------
+CONSTRINT forign_key_name
+FORIGN KEY (dept_id) REFERENCES departments(dept_id)
+------------------------------------------------
+
+---------------------------------------
+DATE IN SQL
+
+SELECT YEAR(given_date_col) AS year
+       MONTH(given_date_col) AS month
+FROM employees
+----------------------------------
+other topics
+---------------------
+CREATE VIEW view_name AS 
+SELECT colunm1,colunm2
+FROM employee;
+---------------------
+SELECT COALESCE(email)
+FROM employees;
+
+---union---
+
+SELECT dept_id FROM employees
+UNION 
+SELECT dept_id FROM departments
+
+
+---------------------------------------
+******condition******
+SELECT salary 
+FROM employees
+WHERE salary >(SELECt AVG (salary) FROM employees)
+
+SELECT * FROM employees 
+WHERE dept_id IN (SELECT dept_id FROM departments WHERE 
+dept_name 'S%')
+-------------------------------------------------
+-----CTE-----
+WITH  salary_stats AS(
+SELECT dept_id, AVG (salary) AS avg_sal
+FROM employees 
+GROUP BY dept_id
+) 
+
+SELECT employee.first_name, employee.salary,department.dept_name,salary_stat.avg_sal,
+FROM employees
+JOIN slary_stats ON employee.dept_id=salary_stat.dept_id,
+JOIN departments ON departments.dept_id=employees.dept_id
+
+WHERE employee.salary > salary_stats.avg_sal;
+
+-------------------------------------------------
+
+
