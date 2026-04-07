@@ -11,5 +11,4 @@ synapse have build in data factory
 it also have pipeline
 it have sql pool
 An SQL pool (primarily associated with Azure Synapse Analytics) is a big data analytic service designed to query and analyze data using T-SQL
-
 it have native notebook
