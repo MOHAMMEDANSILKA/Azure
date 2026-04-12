@@ -17,7 +17,6 @@ scheema evolution
 data brics,
 all the architecture and tools 
 
-
 ---------------------------------
 storeage procedure,trigger t sql
 integration runtime
