@@ -27,11 +27,11 @@ oops
 why cloud is important
 triggers in adf ___ scedule trigger, tumbling window, event based trigger
 pipeline, copy activity
-employee whos name ends with s
-date_diff syntax
-normalisation
+employee whos name ends with s --sql
+date_diff syntax--sql
+normalisation --dbms
 
-overloading overridding
-pyspark starting syntax
+overloading overridding --oops
+pyspark starting syntax -- pyspark init
 serviece models
 
