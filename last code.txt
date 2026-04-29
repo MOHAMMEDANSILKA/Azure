@@ -74,6 +74,7 @@ FROM employees
 GROUP BY dept_id
 ) 
 
+
 SELECT employee.first_name, employee.salary,department.dept_name,salary_stat.avg_sal,
 FROM employees
 JOIN slary_stats ON employee.dept_id=salary_stat.dept_id,
