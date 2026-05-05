@@ -22,6 +22,7 @@ all the architecture and tools
 storeage procedure,trigger t sql
 integration runtime
 
+
 saas paas cloud 
 oops
 why cloud is important
