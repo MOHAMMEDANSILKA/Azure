@@ -15,6 +15,7 @@ spark = SparkSession.builder \
     .config("spark.sql.shuffle.partitions", "4") \
     .getOrCreate()
 
+
 # 2. Sample Employee Data
 data = [
     ("E001", "Alice",   "HR",       "Female",  32000, "2020-03-15",  8, "New York"),
