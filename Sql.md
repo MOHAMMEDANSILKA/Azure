@@ -5,6 +5,8 @@
 <img width="952" height="400" alt="image" src="https://github.com/user-attachments/assets/803f5032-ea3b-4ba4-bce4-7f88fbd52eb6" />
 
 
+
+
 Total inner‑join rows = 7
 
 only rows with matching non‑NULL val values appear.
