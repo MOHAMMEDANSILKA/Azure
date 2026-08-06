@@ -6,7 +6,6 @@
 
 
 
-
 Total inner‑join rows = 7
 
 only rows with matching non‑NULL val values appear.
