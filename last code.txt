@@ -56,7 +56,6 @@ SELECT dept_id FROM employees
 UNION 
 SELECT dept_id FROM departments
 
-
 ---------------------------------------
 ******condition******
 SELECT salary 
